@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DawaOS</title>
+    <style>
+
+
+       	#philibert {
+            background-image: url('image/philibert.gif');
+            background-size: cover;
+            width: 2000px; 
+            height: 2000px; 
+            position: absolute;
+            left: 300px; 
+            top: 70px; 
+            transform: translateY(-50%);
+        }
+         #bouttonsecret {
+            background-image: url('image/bouttonsecret.png');
+            background-size: cover;
+            transform: translate(50%, 2900%);
+            width: 20px; 
+            height: 20px; 
+            margin: 0 auto; 
+        }
+	    #infocleusb {
+		    color: #6a5acd;
+            position: absolute;
+            left: 35%;
+            top: 30%; 
+        }
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #6a5acd;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #cleusb {
+            background-image: url('image/cléUSB.png');
+            background-size: cover;
+            width: 700px; 
+            height: 700px; 
+            position: absolute;
+            left: 20px; 
+            top: 70%; 
+            transform: translateY(-50%);
+        }
+		        footer {
+            background-color: #6a5acd;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+   	<script>
+	         function philibert(){
+         var philibertDiv = document.createElement('div');  // Créez un nouvel élément div
+        philibertDiv.id = 'philibert';  // Définissez l'ID de l'élément div
+        document.body.appendChild(philibertDiv);  // Ajoutez l'élément div au corps du document
+    }
+	</script>
+	    <H4 id="infocleusb">Système 32-bits basé sur NetBSD, c’est donc un system Unix,<br> il y a l’environnement de bureau « Potato » (créé sur mesure) et énormément de fonctionnalités des systèmes d’exploitation des grosses entreprises.<br>La configuration minimale pour ce système est un processeur [nombre d’Hertz] avec un ou plusieurs cœurs,<br> [nombre de Mo de RAM], avec au moins 750Mo de stockage, pour l’édition USB, il faut  que<br> votre ordinateur puisse charger un système depuis clé USB.<br> Il se peut que DAWAOS 1.0 fonctionne sur des ordinateurs moins performants, mais nous n’avons pas fait le test.<br>Ce système, malgré être basé sur NetBSD, est cependant compatible<br> avec énormément d’applications .exe,  .mac et .elf, donc vous ne devrez pas changer tout votre<br> répertoire d’applications. De plus, ce système est environ 96.6%<br> moins cher qu’un autre système récent. Dernièrement,  Il y a<br> très peu de bloatware (un logiciel non désiré préinstallé ou fourni avec un autre programme)<br> permettant donc à votre ordinateur de n’avoir que les logiciels que vous voulez.L’édition CD offre une boite de 26 par 32cm avec une notice<br>, clé de produit et bien évidament, le CD, si votre ordinateur n’offre pas la possibilité d’installer depuis une clé USB.
+		<button id="bouttonsecret" onclick="philibert()"></button>
+</H4>
+        <div id="cleusb"></div>
+    </section>
+
+    <header>
+        <h1>DawaOS 1.0 clé USB</h1>
+    </header>
+	<footer>
+        <p>© DAWAOS. Tous droits absolument pas réservés.</p>
+    </footer>
+	
+</body>

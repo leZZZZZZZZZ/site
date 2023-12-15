@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DawaOS</title>
+    <style>
+        #fusée {
+            background-image: url('image/fusée.gif');
+            background-size: cover;
+            transform: translate(50%, 600%);
+            width: 150px; 
+            height: 150px; 
+            position: absolute;
+            left: 0; /* Ajout de cette ligne pour initialiser la position à gauche */
+        }
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #6a5acd;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #dématérialisé {
+            background-image: url('image/dématérialisé.png');
+            background-size: cover;
+            transform: translate(50%, 30%);
+            width: 200px; 
+            height: 200px; 
+            margin: 0 auto; 
+        }
+        #CD {
+            background-image: url('image/CD.png');
+            background-size: cover;
+            transform: translate(60%, 30%);
+            width: 200px; 
+            height: 200px; 
+            margin: 0 auto; 
+        }
+        #cle {
+            background-image: url('image/cléUSB.png');
+            background-size: cover;
+            transform: translate(-250%, 30%);
+            width: 200px; 
+            height: 200px; 
+            margin: 0 auto; 
+        }
+        #purpleText {
+            color: #6a5acd; /* Couleur violette */
+            position: absolute;
+            top: 55%;
+            left: 47%;
+            transform: translate (00%, -100%);
+        }
+
+        footer {
+            background-color: #6a5acd;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DawaOS</h1>
+    </header>
+
+    <section>
+        <div id="fusée"></div>
+        <button id="dématérialisé" onclick="detailledématérialisé()"></button>
+        <button id="CD" onclick="detailleCD()"></button>
+        <button id="cle" onclick="detaillecléUSB()"></button>
+        <p id="purpleText">DawaOS V1.0<br>5€</p>
+    </section>
+
+    <footer>
+        © DAWAOS. Tous droits pas dutout réservés.
+    </footer>
+    
+    <script>
+        const fuséeElement = document.getElementById('fusée');
+        const screenWidth = window.innerWidth;
+
+        function moveRocket() {
+            const currentPosition = parseInt(getComputedStyle(fuséeElement).left, 10);
+            const newPosition = (currentPosition + 2) % screenWidth; // 10 est la quantité de mouvement à chaque itération
+
+            fuséeElement.style.left = newPosition + 'px';
+        }
+
+        setInterval(moveRocket, 1); // Appel de moveRocket toutes les 100 millisecondes
+
+        function detailledématérialisé() {
+            window.location.href = 'detailledématérialisé.html';
+        }
+
+        function detailleCD() {
+            window.location.href = 'detaillecd.html';
+        }
+
+        function detaillecléUSB() {
+            window.location.href = 'detaillecleusb.html';
+        }
+    </script>
+
+</body>
+</html>
